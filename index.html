@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Sanjay Arjun </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom CSS for animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .animate-fadeIn {
+            animation: fadeIn 1s ease-out forwards;
+        }
+        
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #3b82f6;
+            border-radius: 4px;
+        }
+        
+        /* Active nav link */
+        .nav-link.active {
+            color: #3b82f6;
+            font-weight: 600;
+        }
+        
+        /* Project card hover effect */
+        .project-card {
+            transition: all 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50 text-gray-800">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-sm z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-2xl font-bold text-blue-500">SA</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link hover:text-blue-500 transition">Home</a>
+                    <a href="#about" class="nav-link hover:text-blue-500 transition">About</a>
+                    <a href="#projects" class="nav-link hover:text-blue-500 transition">Projects</a>
+                    <a href="#skills" class="nav-link hover:text-blue-500 transition">Skills</a>
+                    <a href="#experience" class="nav-link hover:text-blue-500 transition">Experience</a>
+                    <a href="#certifications" class="nav-link hover:text-blue-500 transition">Certifications</a>
+                </div>
+                <button class="md:hidden focus:outline-none" id="menu-toggle">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            <!-- Mobile menu -->
+            <div class="md:hidden hidden mt-4" id="mobile-menu">
+                <div class="flex flex-col space-y-3">
+                    <a href="#home" class="nav-link hover:text-blue-500 transition">Home</a>
+                    <a href="#about" class="nav-link hover:text-blue-500 transition">About</a>
+                    <a href="#projects" class="nav-link hover:text-blue-500 transition">Projects</a>
+                    <a href="#skills" class="nav-link hover:text-blue-500 transition">Skills</a>
+                    <a href="#experience" class="nav-link hover:text-blue-500 transition">Experience</a>
+                    <a href="#testimonials" class="nav-link hover:text-blue-500 transition">Testimonials</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center pt-20">
+        <div class="container mx-auto px-6 py-16 md:py-24">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-12 md:mb-0 animate-fadeIn">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-4">Hi, I'm <span class="text-blue-500">Sanjay Arjun</span></h1>
+                    <h2 class="text-2xl md:text-3xl font-semibold mb-6 text-gray-600">Data Analyst</h2>
+                    <p class="text-lg mb-8 text-gray-600 max-w-lg">
+                        I transform data into meaningful insights that drive smart business decisions and powerful storytelling.
+                        I am passionate about leveraging data to uncover hidden patterns, optimize processes, and drive impactful decisions. 
+                        My expertise lies in data visualization, predictive modeling, and statistical analysis, ensuring businesses stay ahead in a data-driven world.
+
+
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#projects" class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg transition shadow-lg">
+                            View My Work
+                        </a>
+                        <a href="#contact" class="border-2 border-blue-500 text-blue-500 hover:bg-blue-50 px-6 py-3 rounded-lg transition">
+                            Contact Me
+                        </a>
+                    </div>
+                    </div>
+                    
+                    <div class="md:w-1/2 flex justify-center animate-fadeIn delay-200">
+                        <div class="relative">
+                          <div class="w-64 h-64 md:w-80 md:h-80 bg-blue-100 rounded-full overflow-hidden border-4 border-blue-500 shadow-xl">
+                            <img src="images/sanju2.jpg" 
+                                 alt="Sanjay Arjun" class="w-full h-full object-cover object-center">
+                          </div>
+                          <div class="absolute -bottom-5 -right-5 bg-white p-4 rounded-lg shadow-lg">
+                            <div class="flex items-center">
+                              <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white">
+                                <i class="fas fa-code text-xl"></i>
+                              </div>
+                              <div class="ml-3">
+                                <p class="font-bold">Sanjay Arjun</p>
+                                <p class="text-sm text-gray-500">Data Analyst</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                    
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 animate-fadeIn">About <span class="text-blue-500">Me</span></h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/3 mb-10 md:mb-0 flex justify-center animate-fadeIn delay-100">
+                    <div class="w-64 h-64 md:w-72 md:h-72 bg-blue-100 rounded-lg overflow-hidden shadow-lg">
+                        <img src="images/sanju.jpg" 
+                             alt="Sanjay Arjun" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                <div class="md:w-2/3 md:pl-12 animate-fadeIn delay-200">
+                    <h3 class="text-2xl font-semibold mb-4">Who am I?</h3>
+                    <p class="text-gray-600 mb-6">
+                        I'm a curious and driven Data Analyst with hands-on experience in transforming raw data into actionable insights. My work bridges the gap between numbers and decisions, blending tools like Excel, Tableau, Power BI, MySQL, and Python to craft visual stories that speak volumes.
+                    </p>
+                    <p class="text-gray-600 mb-8">
+                        With a foundation in computer science and a passion for clarity, I thrive on solving complex problems, building clean dashboards, and making data understandable to everyone—from analysts to decision-makers.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                            <span>Data Visualization & Reporting</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                            <span>Insightful Analytics & Forecasting</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                            <span>Clean Data, Clear Insights</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                            <span>Collaboration & Communication</span>
+                        </div>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="CV/SANJAY ARJUN GENERALIZED CV .pdf" class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-lg transition flex items-center">
+                            <i class="fas fa-download mr-2"></i> Download CV
+                        </a>
+                        <a href="#contact" class="border border-blue-500 text-blue-500 hover:bg-blue-50 px-6 py-2 rounded-lg transition">
+                            Contact Me
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 animate-fadeIn">My <span class="text-blue-500">Projects</span></h2>
+            <p class="text-center text-gray-600 mb-16 max-w-2xl mx-auto animate-fadeIn delay-100">
+                Here are some of my recent projects. Each one was carefully crafted to solve specific problems and deliver value.
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md animate-fadeIn delay-200">
+                    <div class="h-48 overflow-hidden">
+                        <img src="images/netflix.jpg" 
+                             alt="Project 1" class="w-full h-full object-cover transition duration-500 hover:scale-105">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Netflix Dashboard</h3>
+                        <p class="text-gray-600 mb-4">
+                            An interactive Tableau dashboard built to visualize Netflix’s key performance metrics—viewership trends, genre performance, and subscriber data.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Tableau</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Excel</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Data Cleaning</span>
+                        </div>
+                        <div class="flex space-x-3">
+                            <a href="https://www.linkedin.com/posts/sanjayarjun_dataanalytics-tableau-datavisualization-activity-7263240342404046848-evwa?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD7cF1cB26S2-i4YDkF1ANSg2xlMC1f3wgE" class="text-blue-500 hover:text-blue-700">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="#" class="text-gray-500 hover:text-gray-700">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md animate-fadeIn delay-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="images/market.png" 
+                             alt="Project 2" class="w-full h-full object-cover transition duration-500 hover:scale-105">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Marketing Campaign Dashboard</h3>
+                        <p class="text-gray-600 mb-4">
+                            Created 20+ custom metrics using Tableau Prep and Desktop to visualize the performance of a marketing campaign and support strategic decision-making.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Tableau Desktop</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Tableau Prep</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Data Metrics</span>
+                        </div>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-blue-500 hover:text-blue-700">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="#" class="text-gray-500 hover:text-gray-700">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md animate-fadeIn delay-400">
+                    <div class="h-48 overflow-hidden">
+                        <img src="images/pcos" 
+                             alt="Project 3" class="w-full h-full object-cover transition duration-500 hover:scale-105">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">PCOS Risk Prediction</h3>
+                        <p class="text-gray-600 mb-4">
+                            Analyzed real-world health data from Kaggle using R to predict PCOS risk. Focused on pre-processing, feature selection, and model accuracy.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">R</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">dplyr, caret, tm</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Data Cleaning & Analysis</span>
+                        </div>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-blue-500 hover:text-blue-700">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="#" class="text-gray-500 hover:text-gray-700">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12 animate-fadeIn delay-500">
+                <a href="#" class="inline-block border-2 border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white px-6 py-3 rounded-lg transition">
+                    View All Projects
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 animate-fadeIn">My <span class="text-blue-500">Skills</span></h2>
+            <p class="text-center text-gray-600 mb-16 max-w-2xl mx-auto animate-fadeIn delay-100">
+                I've worked with a variety of technologies in the web development world. Here are my core competencies.
+            </p>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <!-- Frontend Skills -->
+                <div class="animate-fadeIn delay-200">
+                    <h3 class="text-xl font-semibold mb-6 flex items-center">
+                        <i class="fas fa-laptop-code text-blue-500 mr-3"></i> Frontend
+                    </h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>HTML/CSS</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-500 h-2 rounded-full" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>JavaScript</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-500 h-2 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>React</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-500 h-2 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>bootstrap</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-500 h-2 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Backend Skills -->
+                <div class="animate-fadeIn delay-300">
+                    <h3 class="text-xl font-semibold mb-6 flex items-center">
+                        <i class="fas fa-server text-blue-500 mr-3"></i> Backend
+                    </h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>Node.js</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-500 h-2 rounded-full" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>python</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-500 h-2 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>java</span>
+                                <span>70%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-500 h-2 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>c / c++</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-500 h-2 rounded-full" style="width: 70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Database Skills -->
+                <div class="animate-fadeIn delay-400">
+                    <h3 class="text-xl font-semibold mb-6 flex items-center">
+                        <i class="fas fa-database text-blue-500 mr-3"></i> Data & DB
+                    </h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>MySQL</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-500 h-2 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>MongoDB</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-500 h-2 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>Advanced Excel</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-500 h-2 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>Tableau</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-500 h-2 rounded-full" style="width: 70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Other Skills -->
+                <div class="animate-fadeIn delay-500">
+                    <h3 class="text-xl font-semibold mb-6 flex items-center">
+                        <i class="fas fa-tools text-blue-500 mr-3"></i> Tools
+                    </h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>Git & Github</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-500 h-2 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>Vscode</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-500 h-2 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>Photoshop / Premiere / DaVinci</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-500 h-2 rounded-full" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>Postman / Figma</span>
+                                <span>70%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-500 h-2 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 animate-fadeIn">My <span class="text-blue-500">Journey</span></h2>
+            <p class="text-center text-gray-600 mb-16 max-w-2xl mx-auto animate-fadeIn delay-100">
+                My professional path and educational background that shaped my expertise.
+            </p>
+            
+            <div class="flex flex-col md:flex-row">
+                <!-- Experience -->
+                <div class="md:w-1/2 md:pr-8 mb-12 md:mb-0 animate-fadeIn delay-200">
+                    <h3 class="text-2xl font-semibold mb-8 flex items-center">
+                        <i class="fas fa-briefcase text-blue-500 mr-4 text-3xl"></i> Experience
+                    </h3>
+                    
+                    <div class="relative">
+                        <!-- Timeline -->
+                        <div class="border-l-2 border-blue-500 absolute h-full top-0 left-6"></div>
+                        
+                        <!-- Experience 1 -->
+                        <div class="mb-8 pl-10 relative">
+                            <div class="absolute w-4 h-4 bg-blue-500 rounded-full left-6 -mt-1"></div>
+                            <div class="bg-white p-6 rounded-lg shadow-md">
+                                <div class="flex justify-between items-start">
+                                    <h4 class="font-bold text-lg">Summer Intern - DBMS & SQL</h4>
+                                    <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Jun 2022 - Jul 2022</span>
+                                </div>
+                                <p class="text-blue-500 mb-2">Board Infinity</p>
+                                <p class="text-gray-600">
+                                    Designed and implemented a database management system using SQL. Analyzed HR datasets and optimized query performance for efficient data retrieval.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- Experience 2 -->
+                        <div class="mb-8 pl-10 relative">
+                            <div class="absolute w-4 h-4 bg-blue-500 rounded-full left-6 -mt-1"></div>
+                            <div class="bg-white p-6 rounded-lg shadow-md">
+                                <div class="flex justify-between items-start">
+                                    <h4 class="font-bold text-lg">Freelance Video Editor</h4>
+                                    <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">2023 – Present</span>
+                                </div>
+                                <p class="text-blue-500 mb-2">Self-Employed</p>
+                                <p class="text-gray-600">
+                                    Completed 5+ freelance projects including video editing and brand reels. Contributed to visual storytelling and enhanced brand visibility. Also designed 20+ event posters and graphics.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- Experience 3 -->
+                        <div class="pl-10 relative">
+                            <div class="absolute w-4 h-4 bg-blue-500 rounded-full left-6 -mt-1"></div>
+                            <div class="bg-white p-6 rounded-lg shadow-md">
+                                <div class="flex justify-between items-start">
+                                    <h4 class="font-bold text-lg">Gym Workouts Website Developer</h4>
+                                    <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Oct 2022 – Dec 2023</span>
+                                </div>
+                                <p class="text-blue-500 mb-2">Personal Project</p>
+                                <p class="text-gray-600">
+                                    Designed and developed a responsive gym workouts website using HTML, CSS, and Python-based quiz system. Focused on user engagement and learning interactivity.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Education -->
+                <div class="md:w-1/2 md:pl-8 animate-fadeIn delay-300">
+                    <h3 class="text-2xl font-semibold mb-8 flex items-center">
+                        <i class="fas fa-graduation-cap text-blue-500 mr-4 text-3xl"></i> Education
+                    </h3>
+                    
+                    <div class="relative">
+                        <!-- Timeline -->
+                        <div class="border-l-2 border-blue-500 absolute h-full top-0 left-6"></div>
+                        
+                        <!-- Education 1 -->
+                        <div class="mb-8 pl-10 relative">
+                            <div class="absolute w-4 h-4 bg-blue-500 rounded-full left-6 -mt-1"></div>
+                            <div class="bg-white p-6 rounded-lg shadow-md">
+                                <div class="flex justify-between items-start">
+                                    <h4 class="font-bold text-lg">B.Tech in Computer Science and Engineering</h4>
+                                    <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">2022 - Present</span>
+                                </div>
+                                <p class="text-blue-500 mb-2">Lovely Professional University, Punjab</p>
+                                <p class="text-gray-600">
+                                    Currently pursuing with a CGPA of 7. Focused on developing strong foundations in software engineering and technology.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- Education 2 -->
+                        <div class="mb-8 pl-10 relative">
+                            <div class="absolute w-4 h-4 bg-blue-500 rounded-full left-6 -mt-1"></div>
+                            <div class="bg-white p-6 rounded-lg shadow-md">
+                                <div class="flex justify-between items-start">
+                                    <h4 class="font-bold text-lg">Intermediate (Class XII)</h4>
+                                    <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">April 2020 - March 2022</span>
+                                </div>
+                                <p class="text-blue-500 mb-2">Krishna Reddy Chaitanya, Vijayawada, Andhra Pradesh</p>
+                                <p class="text-gray-600">
+                                    Completed with 85% in the science stream under the Andhra Pradesh State Board.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- Education 3 -->
+                        <div class="pl-10 relative">
+                            <div class="absolute w-4 h-4 bg-blue-500 rounded-full left-6 -mt-1"></div>
+                            <div class="bg-white p-6 rounded-lg shadow-md">
+                                <div class="flex justify-between items-start">
+                                    <h4 class="font-bold text-lg">Matriculation (Class X)</h4>
+                                    <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">April 2010 – March 2019</span>
+                                </div>
+                                <p class="text-blue-500 mb-2">Dr. K K R’s Gowtham Concept School, Gudivada, Andhra Pradesh</p>
+                                <p class="text-gray-600">
+                                    Secured 10/10 GPA under the SSC curriculum. Built strong academic foundation across core subjects.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+<section id="certifications" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 animate-fadeIn">
+        My <span class="text-blue-500">Certifications</span>
+      </h2>
+      <p class="text-center text-gray-600 mb-16 max-w-2xl mx-auto animate-fadeIn delay-100">
+        Verified certifications I’ve completed to strengthen my knowledge and skills.
+      </p>
+  
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Certificate 1 -->
+        <div class="bg-white p-6 rounded-lg shadow-md text-center animate-fadeIn delay-200">
+          <div class="text-blue-500 text-4xl mb-2">
+            <i class="fas fa-certificate"></i>
+          </div>
+          <h3 class="font-bold text-lg mb-1">Google Data Analytics</h3>
+          <p class="text-sm text-gray-600">Coursera</p>
+          <p class="text-sm text-gray-500 mb-2">Jan 2025</p>
+          <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/UNVF577MZPUF" class="text-blue-500 hover:underline text-sm">
+            View Certificate
+          </a>
+        </div>
+  
+        <!-- Certificate 2 -->
+        <div class="bg-white p-6 rounded-lg shadow-md text-center animate-fadeIn delay-300">
+          <div class="text-blue-500 text-4xl mb-2">
+            <i class="fas fa-database"></i>
+          </div>
+          <h3 class="font-bold text-lg mb-1">DBMS Case Study</h3>
+          <p class="text-sm text-gray-600">Board Infinity</p>
+          <p class="text-sm text-gray-500 mb-2">June 2024</p>
+          <a href="certificates/BOARD INFINITY DBMS AND SQL COURSE CERTIFICATE COMPLETION.pdf" class="text-blue-500 hover:underline text-sm">
+            View Certificate
+          </a>
+        </div>
+  
+        <!-- Certificate 3 -->
+        <div class="bg-white p-6 rounded-lg shadow-md text-center animate-fadeIn delay-400">
+          <div class="text-blue-500 text-4xl mb-2">
+            <i class="fas fa-cloud"></i>
+          </div>
+          <h3 class="font-bold text-lg mb-1">Cloud Computing</h3>
+          <p class="text-sm text-gray-600">NPTEL</p>
+          <p class="text-sm text-gray-500 mb-2">Nov 2024</p>
+          <a href="certificates/Cloud Computing(NPTEL).pdf" class="text-blue-500 hover:underline text-sm">
+            View Certificate
+          </a>
+        </div>
+  
+        <!-- Certificate 4 -->
+        <div class="bg-white p-6 rounded-lg shadow-md text-center animate-fadeIn delay-500">
+          <div class="text-blue-500 text-4xl mb-2">
+            <i class="fas fa-vr-cardboard"></i>
+          </div>
+          <h3 class="font-bold text-lg mb-1">Meta AR Developer</h3>
+          <p class="text-sm text-gray-600">Coursera</p>
+          <p class="text-sm text-gray-500 mb-2">Aug 2024</p>
+          <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/R7I3THIR6RYF" class="text-blue-500 hover:underline text-sm">
+            View Certificate
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 animate-fadeIn">Get In <span class="text-blue-500">Touch</span></h2>
+            <p class="text-center text-gray-600 mb-16 max-w-2xl mx-auto animate-fadeIn delay-100">
+                Have a project in mind or want to discuss potential opportunities? Feel free to reach out!
+            </p>
+            
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-12 md:mb-0 md:pr-8 animate-fadeIn delay-200">
+                    <div class="bg-white p-8 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-semibold mb-6">Contact Information</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-envelope text-blue-500"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Email</h4>
+                                    <p class="text-gray-600">gcsgdv10116@gmail.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-phone-alt text-blue-500"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Phone</h4>
+                                    <p class="text-gray-600">9110702864</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-map-marker-alt text-blue-500"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Location</h4>
+                                    <p class="text-gray-600">Andhra Pradesh</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-semibold mb-4">Follow Me</h4>
+                            <div class="flex space-x-4">
+                                <a href="https://github.com/Sanjayarjun" class="bg-blue-500 hover:bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center transition">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/in/sanjayarjun/" class="bg-blue-500 hover:bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center transition">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="#" class="bg-blue-500 hover:bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center transition">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="https://www.instagram.com/sanjay_arjun._/?hl=en" class="bg-blue-500 hover:bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center transition">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2 md:pl-8 animate-fadeIn delay-300">
+                    <div class="bg-white p-8 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-semibold mb-6">Send Me a Message</h3>
+                        <form id="contactForm">
+                            <div class="mb-6">
+                                <label for="name" class="block text-gray-700 mb-2">Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" required>
+                            </div>
+                            <div class="mb-6">
+                                <label for="email" class="block text-gray-700 mb-2">Email</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" required>
+                            </div>
+                            <div class="mb-6">
+                                <label for="subject" class="block text-gray-700 mb-2">Subject</label>
+                                <input type="text" id="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" required>
+                            </div>
+                            <div class="mb-6">
+                                <label for="message" class="block text-gray-700 mb-2">Message</label>
+                                <textarea id="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" required></textarea>
+                            </div>
+                            <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg transition w-full">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-8 md:mb-0">
+                    <h3 class="text-2xl font-bold mb-4">Sanjay Arjun</h3>
+                    <p class="max-w-xs text-gray-400">
+                        Data Analyst & Full Stack Developer crafting data-driven and digital experiences that make an impact.
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#home" class="text-gray-400 hover:text-white transition">Home</a></li>
+                            <li><a href="#about" class="text-gray-400 hover:text-white transition">About</a></li>
+                            <li><a href="#projects" class="text-gray-400 hover:text-white transition">Projects</a></li>
+                            <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Services</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Data Analysis & Visualization</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Data Cleaning & Automation</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Full Stack Web Development</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">UI/UX Design</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Tech Consulting</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Connect</h4>
+                        <div class="flex space-x-4 mb-4">
+                            <a href="https://github.com/Sanjayarjun" class="text-gray-400 hover:text-white transition">
+                                <i class="fab fa-github text-xl"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/sanjayarjun/" class="text-gray-400 hover:text-white transition">
+                                <i class="fab fa-linkedin-in text-xl"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-white transition">
+                                <i class="fab fa-twitter text-xl"></i>
+                            </a>
+                            <a href="https://www.instagram.com/sanjay_arjun._/?hl=en" class="text-gray-400 hover:text-white transition">
+                                <i class="fab fa-instagram text-xl"></i>
+                            </a>
+                        </div>
+                        <p class="text-gray-400">gcsgdv10116@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Sanjay Arjun. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Highlight active nav link on scroll
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', function() {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (pageYOffset >= (sectionTop - 300)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            // Here you would typically send the data to a server
+            // For this example, we'll just show an alert
+            alert(`Thank you, ${name}! Your message has been sent. I'll get back to you soon.`);
+            
+            // Reset form
+            this.reset();
+        });
+
+        // Add animation classes on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fadeIn');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
